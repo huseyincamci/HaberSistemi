@@ -50,6 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContext\HaberContext.cs" />
+    <Compile Include="Migrations\201705051338170_Olustur.cs" />
+    <Compile Include="Migrations\201705051338170_Olustur.Designer.cs">
+      <DependentUpon>201705051338170_Olustur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Kullanici.cs" />
     <Compile Include="Model\Rol.cs" />
@@ -58,6 +62,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705051338170_Olustur.resx">
+      <DependentUpon>201705051338170_Olustur.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
