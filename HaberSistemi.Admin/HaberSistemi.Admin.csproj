@@ -137,7 +137,6 @@
     <Content Include="img\loaders\loader7.gif" />
     <Content Include="img\loaders\loader8.gif" />
     <Content Include="img\loaders\loader9.gif" />
-    <Content Include="img\logo.png" />
     <Content Include="img\tickc81e.html" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\page-bootstrap.js" />
@@ -194,6 +193,10 @@
     <Content Include="fonts\typicons.ttf" />
     <Content Include="fonts\typicons.woff" />
     <Content Include="fonts\typiconsd41d.eot" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Sidebar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -204,7 +207,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HaberiSistemi.Data\HaberiSistemi.Data.csproj">
