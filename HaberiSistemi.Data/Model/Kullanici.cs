@@ -30,6 +30,8 @@ namespace HaberiSistemi.Data.Model
         [Display(Name = "Aktif")]
         public bool Aktif { get; set; }
 
+        public int RolId { get; set; }
+        [ForeignKey("RolId")]
         public virtual Rol Rol { get; set; }
     }
 }
