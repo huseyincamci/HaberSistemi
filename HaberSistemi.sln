@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaberiSistemi.UI", "HaberiSistemi.UI\HaberiSistemi.UI.csproj", "{065B6578-5ABB-433E-9639-BB3E0573BE95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaberSistemi.Admin", "HaberSistemi.Admin\HaberSistemi.Admin.csproj", "{A6DDA653-4CD6-4B99-9F83-EFD6110C235F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaberiSistemi.Data", "HaberiSistemi.Data\HaberiSistemi.Data.csproj", "{E47E0028-70D4-4D5E-8793-B7B209A5A860}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaberSistemi.Core", "HaberSistemi.Core\HaberSistemi.Core.csproj", "{B0BC83D2-4F0B-478C-9501-DECA82F00D2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaberSistemi.Service", "HaberSistemi.Service\HaberSistemi.Service.csproj", "{134FEC34-1896-452B-8411-0C641A964116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{065B6578-5ABB-433E-9639-BB3E0573BE95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{065B6578-5ABB-433E-9639-BB3E0573BE95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{065B6578-5ABB-433E-9639-BB3E0573BE95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{065B6578-5ABB-433E-9639-BB3E0573BE95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6DDA653-4CD6-4B99-9F83-EFD6110C235F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6DDA653-4CD6-4B99-9F83-EFD6110C235F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6DDA653-4CD6-4B99-9F83-EFD6110C235F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6DDA653-4CD6-4B99-9F83-EFD6110C235F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E47E0028-70D4-4D5E-8793-B7B209A5A860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E47E0028-70D4-4D5E-8793-B7B209A5A860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E47E0028-70D4-4D5E-8793-B7B209A5A860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E47E0028-70D4-4D5E-8793-B7B209A5A860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0BC83D2-4F0B-478C-9501-DECA82F00D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0BC83D2-4F0B-478C-9501-DECA82F00D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0BC83D2-4F0B-478C-9501-DECA82F00D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0BC83D2-4F0B-478C-9501-DECA82F00D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134FEC34-1896-452B-8411-0C641A964116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134FEC34-1896-452B-8411-0C641A964116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134FEC34-1896-452B-8411-0C641A964116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134FEC34-1896-452B-8411-0C641A964116}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
