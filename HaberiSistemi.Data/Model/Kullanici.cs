@@ -1,8 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HaberiSistemi.Data.Model
 {
+    [Table("Kullanici")]
     public class Kullanici
     {
         [Key]
