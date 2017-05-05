@@ -1,15 +1,12 @@
 namespace HaberiSistemi.Data.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<HaberiSistemi.Data.DataContext.HaberContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(HaberiSistemi.Data.DataContext.HaberContext context)
