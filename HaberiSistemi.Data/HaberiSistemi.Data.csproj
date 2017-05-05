@@ -54,8 +54,14 @@
     <Compile Include="Migrations\201705051338170_Olustur.Designer.cs">
       <DependentUpon>201705051338170_Olustur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705051420082_HaberveResim.cs" />
+    <Compile Include="Migrations\201705051420082_HaberveResim.Designer.cs">
+      <DependentUpon>201705051420082_HaberveResim.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Haber.cs" />
     <Compile Include="Model\Kullanici.cs" />
+    <Compile Include="Model\Resim.cs" />
     <Compile Include="Model\Rol.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -66,6 +72,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705051338170_Olustur.resx">
       <DependentUpon>201705051338170_Olustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705051420082_HaberveResim.resx">
+      <DependentUpon>201705051420082_HaberveResim.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
