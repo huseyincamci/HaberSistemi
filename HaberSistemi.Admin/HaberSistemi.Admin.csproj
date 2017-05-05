@@ -131,6 +131,16 @@
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HaberiSistemi.Data\HaberiSistemi.Data.csproj">
+      <Project>{e47e0028-70d4-4d5e-8793-b7b209a5a860}</Project>
+      <Name>HaberiSistemi.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HaberSistemi.Core\HaberSistemi.Core.csproj">
+      <Project>{b0bc83d2-4f0b-478c-9501-deca82f00d2e}</Project>
+      <Name>HaberSistemi.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
