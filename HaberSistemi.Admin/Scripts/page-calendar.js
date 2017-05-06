@@ -4,7 +4,7 @@ $(function() {
 
 	// Calendar
 	var calendar = $("#calendar").calendar({
-		tmpl_path: "/saltkin/calendar/",
+		tmpl_path: "/calendar/",
 		events_source: function () { return []; }
 	});
 	
