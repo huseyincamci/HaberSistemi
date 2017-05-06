@@ -28,7 +28,7 @@ namespace HaberiSistemi.Data.Model
         [Display(Name = "Eklenme Tarihi")]
         public DateTime EklenmeTarihi { get; set; }
 
-        public int Goruntelenme { get; set; }   
+        public int Goruntelenme { get; set; }
 
         [Display(Name = "Resim")]
         [MaxLength(255, ErrorMessage = "Çok fazla girdiniz.")]
@@ -38,6 +38,10 @@ namespace HaberiSistemi.Data.Model
         public int KullaniciId { get; set; }
         public virtual Kullanici Kullanici { get; set; }
 
-        public virtual ICollection<Resim> Resims{ get; set; }
+        public virtual ICollection<Resim> Resims { get; set; }
+
+        [ForeignKey("Kategori")]
+        public int KategoriId { get; set; }
+        public virtual Kategori Kategori { get; set; }
     }
 }
