@@ -8,7 +8,7 @@ namespace HaberSistemi.Admin.CustomFilter
         public void OnActionExecuting(ActionExecutingContext filterContext)
         {
             var session = filterContext.HttpContext.Session?["KullaniciEmail"];
-            if (session != null)
+            if (session == null)
             {
                 filterContext.Result = new RedirectToRouteResult(
                     new RouteValueDictionary { { "controller", "Account" }, { "action", "Login" } });
@@ -17,7 +17,7 @@ namespace HaberSistemi.Admin.CustomFilter
 
         public void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

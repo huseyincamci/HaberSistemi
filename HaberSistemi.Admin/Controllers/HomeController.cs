@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using HaberSistemi.Admin.CustomFilter;
 using System.Web.Mvc;
 
 namespace HaberSistemi.Admin.Controllers
 {
+    [LoginFilter]
     public class HomeController : Controller
     {
         // GET: Home
