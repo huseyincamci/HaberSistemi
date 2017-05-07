@@ -1,19 +1,25 @@
 ﻿function KategoriEkle(parameters) {
     Kategori = new Object();
-    Kategori.Adi = $("#kategoriAdi").val();
+    Kategori.KategoriAdi = $("#kategoriAdi").val();
     Kategori.Url = $("#kategoriUrl").val();
     Kategori.Aktif = $("#kategoriAktif").is(":checked");
 
-
     $.ajax({
-        url: "Kategori/Ekle",
+        url: "/Kategori/Ekle",
         data: Kategori,
         type: "POST",
-        success: function(response) {
-            if (response.success) {
-                
+        dataType: "json",
+        success: function (response) {
+            if (response.Success) {
+                bootbox.alert(response.Message,
+                    function () {
+                        location.reload();
+                    });
             } else {
-                
+                bootbox.alert(response.Message,
+                    function () {
+
+                    });
             }
         }
     });
