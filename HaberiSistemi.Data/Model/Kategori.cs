@@ -22,5 +22,9 @@ namespace HaberiSistemi.Data.Model
         public bool Aktif { get; set; }
 
         public virtual ICollection<Haber> Habers { get; set; }
+
+        [ForeignKey("Kullanici")]
+        public int? KullaiciId { get; set; } 
+        public virtual Kullanici Kullanici { get; set; }    
     }
 }

@@ -3,6 +3,7 @@
     Kategori.KategoriAdi = $("#kategoriAdi").val();
     Kategori.Url = $("#kategoriUrl").val();
     Kategori.Aktif = $("#kategoriAktif").is(":checked");
+    Kategori.ParentId = $("#ParentId").val();
 
     $.ajax({
         url: "/Kategori/Ekle",
