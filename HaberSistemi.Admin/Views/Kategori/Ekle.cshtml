@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Ekle";
+}
+<div class="container-fluid">
+    <!-- Basic form -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <header class="panel-heading">@ViewBag.Title</header>
+                <div class="panel-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="kategoriAdi">Kategori Adı</label>
+                            <input type="text" class="form-control" id="kategoriAdi" placeholder="Kategori Adı" name="KategoriAdi">
+                        </div>
+                        <div class="form-group">
+                            <label for="kategoriUrl">Kategori Url</label>
+                            <input type="text" class="form-control" id="kategoriUrl" placeholder="URL" name="KategoriUrl">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="Aktif" id="kategoriAktif"> Aktif mi?
+                            </label>
+                        </div>
+                        <a href="#" class="btn btn-primary" onclick="KategoriEkle();">Ekle</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Basic form -->
+</div>
+<!-- /Page container -->
+<script src="~/Scripts/Global.js"></script>
