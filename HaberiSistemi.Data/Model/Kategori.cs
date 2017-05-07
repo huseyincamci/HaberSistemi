@@ -10,6 +10,7 @@ namespace HaberiSistemi.Data.Model
         [Key]
         public int Id { get; set; }
 
+        [Required]
         [MinLength(2, ErrorMessage = "{0} karakterden az olamaz."), MaxLength(150, ErrorMessage = "150 karakterden fazla girmeyiniz.")]
         public string KategoriAdi { get; set; }
 
