@@ -27,7 +27,7 @@ namespace HaberSistemi.Admin.Controllers
             var kullaniciVarmi = _kullaniciRepository.GetMany(x => x.Email == kullanici.Email && x.Sifre == kullanici.Sifre && x.Aktif == true).SingleOrDefault();
             if (kullaniciVarmi !=null)
             {
-                if (kullaniciVarmi.Rol .RolAdi == "Admin")
+                if (kullaniciVarmi.Rol .RolAdi == "Administrator")
                 {
                     Session["KullaniciEmail"] = kullaniciVarmi.Email;
                     return RedirectToAction("Index", "Home");
