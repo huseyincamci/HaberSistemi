@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContext\HaberContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\BaseEntity.cs" />
     <Compile Include="Model\Haber.cs" />
     <Compile Include="Model\Kategori.cs" />
