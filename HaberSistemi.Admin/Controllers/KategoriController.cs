@@ -1,5 +1,6 @@
 ﻿using HaberiSistemi.Data.Model;
 using HaberSistemi.Admin.Class;
+using HaberSistemi.Admin.CustomFilter;
 using HaberSistemi.Core.Infrastructure;
 using PagedList;
 using System;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace HaberSistemi.Admin.Controllers
 {
+    [LoginFilter]
     public class KategoriController : Controller
     {
         private readonly IKategoriRepository _kategoriRepository;
