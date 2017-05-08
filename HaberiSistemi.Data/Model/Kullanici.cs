@@ -1,15 +1,11 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HaberiSistemi.Data.Model
 {
     [Table("Kullanici")]
-    public class Kullanici
+    public class Kullanici : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
-
         [Display(Name = "Ad Soyad")]
         [MaxLength(50, ErrorMessage = "Lütfen 50 karakterden fazla değer girmeyiniz.")]
         public string AdSoyad { get; set; }
@@ -23,12 +19,6 @@ namespace HaberiSistemi.Data.Model
         [DataType(DataType.Password)]
         [MaxLength(16, ErrorMessage = "Lütfen 16 karakterden fazla değer girmeyiniz.")]
         public string Sifre { get; set; }
-
-        [Display(Name = "Kayıt Tarihi")]
-        public DateTime KayitTarihi { get; set; }
-
-        [Display(Name = "Aktif")]
-        public bool Aktif { get; set; }
 
         [ForeignKey("Rol")]
         public int RolId { get; set; }

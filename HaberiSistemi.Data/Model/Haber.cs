@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HaberiSistemi.Data.Model
 {
     [Table("Haber")]
-    public class Haber
+    public class Haber : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
-
         [Required]
         [Display(Name = "Haber Başlık")]
         [MaxLength(255, ErrorMessage = "Çok fazla girdiniz.")]
@@ -21,12 +17,6 @@ namespace HaberiSistemi.Data.Model
 
         [Display(Name = "Açıklama")]
         public string Aciklama { get; set; }
-
-        [Display(Name = "Aktif")]
-        public bool Aktif { get; set; }
-
-        [Display(Name = "Eklenme Tarihi")]
-        public DateTime EklenmeTarihi { get; set; }
 
         public int Goruntelenme { get; set; }
 

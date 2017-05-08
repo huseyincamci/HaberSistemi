@@ -3,14 +3,12 @@
 namespace HaberiSistemi.Data.Model
 {
     [Table("Resim")]
-    public class Resim
+    public class Resim : BaseEntity
     {
-        public int Id { get; set; }
-
         public string ResimUrl { get; set; }
 
         [ForeignKey("Haber")]
-        public int HaberId { get; set; } 
-        public Haber Haber { get; set; }    
+        public int HaberId { get; set; }
+        public Haber Haber { get; set; }
     }
 }
