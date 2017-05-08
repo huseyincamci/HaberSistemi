@@ -42,14 +42,14 @@ namespace HaberSistemi.Admin.Controllers
                 return Json(new ResultJson {Success = false, Message = "Kategori eklerken hata oluştu"});
             }
         }
-
-        public ActionResult Sil(int id)
+        
+        public JsonResult Sil(int id)
         {
             Kategori kategori = _kategoriRepository.GetById(id);
-            if (kategori == null) return View();
+            if (kategori == null) return Json(new ResultJson { Success = false, Message = "Kategori bulunamadı" });
             _kategoriRepository.Delete(id);
             _kategoriRepository.Save();
-            return RedirectToAction("Index", "Kategori");
+            return Json(new ResultJson {Success = true, Message = "Kategori silme işlemi başarılı."});
         }
 
         public void SetKategoriListele()

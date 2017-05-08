@@ -30,7 +30,7 @@
                                         <td>@Html.Raw(kategori.Aktif ? "<span class='label label-success'>Aktif</span>" : "<span class='label label-danger'>Pasif</span>")</td>
                                         <td>
                                             <button class="btn btn-primary btn-sm">Düzenle</button>
-                                            @Html.ActionLink("Sil", "Sil", new {id = kategori.Id}, new {onclick="return confirm('Kaydı silmek istediğinize emin misiniz?')", @class="btn btn-danger btn-sm"})
+                                            <button class="btn btn-danger btn-sm" id="KategoriDelete" onclick="KategoriSil(@kategori.Id)">Sil</button>
                                         </td>
                                     </tr>
                                 }
