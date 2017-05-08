@@ -1,6 +1,7 @@
 ﻿using HaberiSistemi.Data.Model;
 using HaberSistemi.Admin.Class;
 using HaberSistemi.Core.Infrastructure;
+using PagedList;
 using System;
 using System.Linq;
 using System.Web.Mvc;
@@ -17,9 +18,9 @@ namespace HaberSistemi.Admin.Controllers
         }
 
         // GET: Kategori
-        public ActionResult Index()
+        public ActionResult Index(int sayfa = 1)
         {
-            return View(_kategoriRepository.GetAll().ToList());
+            return View(_kategoriRepository.GetAll().OrderByDescending(x => x.Id).ToPagedList(sayfa, 10));
         }
 
         public ActionResult Ekle()
@@ -35,21 +36,21 @@ namespace HaberSistemi.Admin.Controllers
             {
                 _kategoriRepository.Insert(kategori);
                 _kategoriRepository.Save();
-                return Json(new ResultJson {Success = true, Message = "Kategori ekleme işleminiz başarılı."});
+                return Json(new ResultJson { Success = true, Message = "Kategori ekleme işleminiz başarılı." });
             }
             catch (Exception)
             {
-                return Json(new ResultJson {Success = false, Message = "Kategori eklerken hata oluştu"});
+                return Json(new ResultJson { Success = false, Message = "Kategori eklerken hata oluştu" });
             }
         }
-        
+
         public JsonResult Sil(int id)
         {
             Kategori kategori = _kategoriRepository.GetById(id);
             if (kategori == null) return Json(new ResultJson { Success = false, Message = "Kategori bulunamadı" });
             _kategoriRepository.Delete(id);
             _kategoriRepository.Save();
-            return Json(new ResultJson {Success = true, Message = "Kategori silme işlemi başarılı."});
+            return Json(new ResultJson { Success = true, Message = "Kategori silme işlemi başarılı." });
         }
 
         public void SetKategoriListele()

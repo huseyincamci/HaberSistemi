@@ -1,4 +1,5 @@
-﻿@model IEnumerable<HaberiSistemi.Data.Model.Kategori>
+﻿@model PagedList.IPagedList<HaberiSistemi.Data.Model.Kategori>
+@using PagedList.Mvc
 @{
     ViewBag.Title = "Kategori Listesi";
 }
@@ -39,8 +40,8 @@
                     </div>
                 </div>
             </div>
+            @Html.PagedListPager(Model, sayfa => Url.Action("Index", new { sayfa }), PagedListRenderOptions.ClassicPlusFirstAndLast)
         </div>
         <!-- /Responsive table -->
     </div>
 </div>
-
