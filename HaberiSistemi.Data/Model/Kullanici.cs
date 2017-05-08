@@ -6,6 +6,11 @@ namespace HaberiSistemi.Data.Model
     [Table("Kullanici")]
     public class Kullanici : BaseEntity
     {
+        [Required]
+        [Display(Name = "Kullanıcı Adı")]
+        [MaxLength(20, ErrorMessage = "Lütfen 20 karakterden fazla değer girmeyiniz.")]
+        public string KullaniciAdi { get; set; }
+
         [Display(Name = "Ad Soyad")]
         [MaxLength(50, ErrorMessage = "Lütfen 50 karakterden fazla değer girmeyiniz.")]
         public string AdSoyad { get; set; }
