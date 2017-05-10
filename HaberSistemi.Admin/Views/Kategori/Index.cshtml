@@ -30,7 +30,7 @@
                                         <td>@kategori.ParentId</td>
                                         <td>@Html.Raw(kategori.Aktif ? "<span class='label label-success'>Aktif</span>" : "<span class='label label-danger'>Pasif</span>")</td>
                                         <td>
-                                            <button class="btn btn-primary btn-sm">Düzenle</button>
+                                            <a href="@Url.Action("Duzenle", "Kategori", new { id = kategori.Id })" class="btn btn-primary btn-sm">Düzenle</a>
                                             <button class="btn btn-danger btn-sm" id="KategoriDelete" onclick="KategoriSil(@kategori.Id)">Sil</button>
                                         </td>
                                     </tr>

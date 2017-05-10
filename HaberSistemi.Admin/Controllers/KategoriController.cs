@@ -55,6 +55,28 @@ namespace HaberSistemi.Admin.Controllers
             return Json(new ResultJson { Success = true, Message = "Kategori silme işlemi başarılı." });
         }
 
+        public ActionResult Duzenle(int id)
+        {
+            Kategori kategori = _kategoriRepository.GetById(id);
+            if (kategori == null) throw new Exception("Kategori bulunamadı.");
+            SetKategoriListele();
+            return View(kategori);
+        }
+
+        [HttpPost]
+        public JsonResult Duzenle(Kategori kategori)
+        {
+            Kategori kat = _kategoriRepository.GetById(kategori.Id);
+            kat.Aktif = kategori.Aktif;
+            kat.KategoriAdi = kategori.KategoriAdi;
+            if (kategori.ParentId != 0) kat.ParentId = kategori.ParentId;
+            kat.Url = kategori.Url;
+            _kategoriRepository.Save();
+            return Json(new ResultJson() { Success = true, Message = "Düzenleme işlemi başarılı." });
+
+            //return Json(new ResultJson() { Success = false, Message = "Hata oluştu." });
+        }
+
         public void SetKategoriListele()
         {
             var kategoriler = _kategoriRepository.GetMany(x => x.ParentId == 0).ToList();
